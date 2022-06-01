@@ -27,7 +27,7 @@ jobs:
     - name: Publish artifacts
       uses: actions/upload-artifact@master
       with:
-        name: blazorStaticSite
+        name: 215website
         path: ${{env.DOTNET_ROOT}}/blazorapp
  
   deploy:
@@ -40,7 +40,7 @@ jobs:
     - name: Download artifacts
       uses: actions/download-artifact@master
       with:
-        name: blazorStaticSite
+        name: 215website
  
     - name: Deploy to S3 🚀
       uses: jakejarvis/s3-sync-action@master
